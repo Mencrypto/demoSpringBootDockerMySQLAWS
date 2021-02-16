@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Todos los usuarios</title>
+</head>
+<body>
+<table border="1">
+	<thead>
+		<tr>
+			<th>id</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th colspan="2">Acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+<tr th:each="rol : ${rolList}">
+		<td th:text="${rol.id}"></td>
+		<td th:text="${rol.name}"></td>
+		<td th:text="${rol.description}"></td>
+		<!-- Para cocatenar cadenas usamos las comillas sencillas ya que sino no toma la variable user.id -->
+		<td><a th:href="@{'/rol/editForm/' + ${rol.id}}"><button>Editar</button></a></td>
+		<!-- Para cocatenar tambien podemos usar pipes -->
+		<td><a th:href="@{'/rol/delete/' + ${rol.id}}"><button >Borrar</button></a></td>
+	</tr>	
+	</tbody>
+</table>
+</body>
+</html>

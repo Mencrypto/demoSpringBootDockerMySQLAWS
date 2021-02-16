@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- Debe agregarse el NS de thymeleaf -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Eliminaci&oacute;n de nuevo usuario con thymeleaf</title>
+</head>
+<body>
+<!-- En el action debe ir un #  el @ es sinónimo de "está" en para un recurso $ de variable * depropiedad de variable-->
+	<form action="#" method="post" th:action="@{/user/deleteUser}" th:object="${user}">
+		<input type="text" th:field="*{id}" hidden="true"/><br/><br/>
+		<input type="text" placeholder="Nombre:" th:field="*{name}"/><br/><br/>
+		<input type="text" placeholder="Apellido Paterno:" th:field="*{lastname}" /><br/><br/>
+		<input type="text" placeholder="Apellido Maternos:" th:field="*{surname}" /><br/><br/>
+		<input type="number" placeholder="Edad:" min="18" th:field="${user.age}" /><br/><br/>
+		<input type="submit" />
+	</form>
+</body>
+</html>

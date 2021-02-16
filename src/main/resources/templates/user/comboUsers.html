@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Combo usuarios</title>
+</head>
+<body>
+<select class="form-control" id="subjectOrder" name="subjectOrder">
+    <option th:each="user : ${userList}" th:value="${user.name}" th:text="${user.name}"></option>
+</select>
+</body>
+</html>

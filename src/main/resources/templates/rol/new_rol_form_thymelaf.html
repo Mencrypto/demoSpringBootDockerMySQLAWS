@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- Debe agregarse el NS de thymeleaf -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Creaci&oacute;n de nuevo rol con thymeleaf</title>
+</head>
+<body>
+<!-- En el action debe ir un #  el @ es sinónimo de "está" en para un recurso $ de variable * depropiedad de variable-->
+	<form action="#" method="post" th:action="@{/rol/newRol}" th:object="${rol}">
+		<input type="text" placeholder="Nombre:" th:field="*{name}"/><br/><br/>
+		<input type="text" placeholder="Descripcion:" th:field="*{description}" /><br/><br/>
+		<input type="submit" />
+	</form>
+</body>
+</html>
