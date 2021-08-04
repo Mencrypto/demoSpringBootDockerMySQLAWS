@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://mysqldb.cwya5lsy6415.us-east-1.rds.amazonaws.com:3306/example_db?serverTimezone=Mexico/General
+    url: jdbc:mysql://mysqldb:3306/example_db?serverTimezone=Mexico/General
     username: root
     password: root1234
     
